@@ -16,6 +16,9 @@
 
 	$(function() {
 
+		var toggleMenu = false;
+		var toggleActive = undefined;
+
 		var	$window = $(window),
 			$body = $('body');
 
@@ -44,12 +47,22 @@
 		// Scrolly links.
 			$('.scrolly').scrolly();
 
+		// Toogle Sub-links
+
+			
+
+			$('#nav .more-sub-link').on('click', function(e){
+				$('#nav .sub-link').toggle('slow');
+			});
+
+			
+
 		// Nav.
 			var $nav_a = $('#nav a');
 
 			// Scrolly-fy links.
 				$nav_a
-					.scrolly()
+					.scrolly() // efecto de transición
 					.on('click', function(e) {
 
 						var t = $(this),
@@ -67,7 +80,6 @@
 
 						// Set this link to active
 							t.addClass('active');
-
 					});
 
 			// Initialize scrollzer.
@@ -84,7 +96,31 @@
 
 				});
 
-				$.scrollzer(ids, { pad: 200, lastHack: true });
+				//$.scrollzer(ids,{pad: 200, lastHack: true,});
+
+				$('#main section').scrollex({
+					mode: 'middle',
+					enter: function(){
+						var element = $('#nav a[href$=#'+$(this)[0].id+']:first');
+						element.addClass('active');
+						if(element.parent().parent().hasClass("sub-link")){
+							if(!toggleMenu){
+								toggleActive = element.parent().parent();
+								toggleActive.toggle("slow");
+								toggleMenu = true;
+							}
+						}else{
+							toggleMenu = false;
+							toggleActive.toggle("slow");
+							toggleActive = undefined;
+						}
+					},
+					leave: function(){
+						var element = $('#nav a[href$=#'+$(this)[0].id+']:first');
+						element.removeClass('active');
+					}
+				});
+
 
 		// Header (narrower + mobile).
 
