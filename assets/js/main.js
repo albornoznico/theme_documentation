@@ -114,6 +114,8 @@
 					$('#headerToggle, #header, #main')
 						.css('transition', 'none');
 
+		window.prettyPrint && prettyPrint();
+
 	});
 
 })(jQuery);

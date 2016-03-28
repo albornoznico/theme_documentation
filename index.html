@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css">
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
@@ -24,8 +25,8 @@
 					<!-- Logo -->
 						<div id="logo">
 							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">John Doe</h1>
-							<p>Hyperspace Engineer</p>
+							<h1 id="title">Prontus Develop</h1>
+							<p>Manual de desarrollo</p>
 						</div>
 
 					<!-- Nav -->
@@ -113,58 +114,37 @@
 						</div>
 					</section>
 
-					<section id="sub-seccion1">
-						<header>
-							nada solo contenido 1
-						</header>
-						<footer>
-							mas contenido jiji
-						</footer>
+					<section id="sub-seccion1" class="two">
+						<div class="container">
+							<header>
+								nada solo contenido 1
+							</header>
+							<footer>
+								mas contenido jiji
+							</footer>
+						</div>
 					</section>
 
-					<section id="sub-seccion2">
-						<header>
-							nada solo contenido 2
-						</header>
-						<footer>
-							mas contenido jiji
-						</footer>
+					<section id="sub-seccion2" class="three">
+						<div class="container">
+							<header>
+								<h2>nada solo contenido 2</h2>
+							</header>
+							<footer>
+								mas contenido jiji
+							</footer>
+						</div>
 					</section>
 
-					<section id="sub-seccion3">
-						<header>
-							nada solo contenido 3
-						</header>
-						<footer>
-							mas contenido jiji
-						</footer>
-					</section>
-
-					<section id="sub-seccion4">
-						<header>
-							nada solo contenido 4
-						</header>
-						<footer>
-							mas contenido jiji
-						</footer>
-					</section>
-
-					<section id="sub-seccion5">
-						<header>
-							nada solo contenido 5
-						</header>
-						<footer>
-							mas contenido jiji
-						</footer>
-					</section>
-
-					<section id="sub-seccion6">
-						<header>
-							nada solo contenido 6
-						</header>
-						<footer>
-							mas contenido jiji
-						</footer>
+					<section id="sub-seccion3" class="four">
+						<div class="container">
+							<header>
+								nada solo contenido 3
+							</header>
+							<footer>
+								mas contenido jiji
+							</footer>
+						</div>
 					</section>
 
 				<!-- Portfolio -->
@@ -180,6 +160,48 @@
 							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
 							fusce hendrerit lacus ridiculus.</p>
 
+							<pre class="prettyprint linenums">
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
+&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+&lt;title&gt;untitled&lt;/title&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;TextMate http://macromates.com/&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;Ivor Padilla&quot;&gt;
+&lt;!-- Date: 2012-03-08 --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+								</pre>
+								<pre class="prettyprint linenums">
+%%_EXCLUDE_PORT_AREA=1,2%%
+%%_EXCLUDE_PORT=inicio.xml%%
+								</pre>
+								<pre class="prettyprint linenums">
+&lt;html&gt;
+	&lt;head&gt;
+	%%LOOP1(AREA1)%%
+		&lt;div class="index"&gt;
+			&lt;h1&gt;%%_TITULAR%%&lt;/h1&gt;
+		&lt;/div&gt;	
+	%%/LOOP%%
+	&lt;/head&gt;
+&lt;/html&gt;
+
+								</pre>
+								<pre class="prettyprint linenums lang-html">
+%%LOOP%%
+	&lt;div class="titular"&gt;
+		&lt;a href="%%_FILE%%" target="_top"&gt;%%_TXT_TITULAR%%&lt;/a&gt;
+	&lt;/div&gt;
+%%/LOOP%%
+%%_msg%% Vea más en las siguientes páginas:| %%_HTML_NROS_PAG%% |%%/_msg%%
+&lt;!-- MSG no_results = No se encontraron resultados. --&gt;
+								</pre>
 							<div class="row">
 								<div class="4u 12u$(mobile)">
 									<article class="item">
@@ -295,6 +317,7 @@
 			<script src="assets/js/jquery.scrollzer.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<script src="assets/js/google-code-prettify/prettify.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 
