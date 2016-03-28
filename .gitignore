@@ -1,2 +1,5 @@
 /templatefordocumentation.sublime-project
 /templatefordocumentation.sublime-workspace
+_unused/
+.sass-cache/
+*.map
